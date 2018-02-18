@@ -10,22 +10,29 @@ import UIKit
 
 class NewEntryViewController: UIViewController {
 
+    // MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
+        entryTextView.inputAccessoryView = toolbar
         entryTextView.becomeFirstResponder()
-        
     }
-    @IBOutlet weak var entryTextView: UITextView!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - outlets
+    
+    @IBOutlet weak var entryTextView: UITextView!
+    @IBOutlet var toolbar: UIView!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    // MARK: - Interactions
+    
+    @IBAction func doneButton(_ sender: UIBarButtonItem) {
     }
-    */
+    
+    @IBAction func locationButton(_ sender: UIButton) {
+    }
+    
+    
+   
 
 }
