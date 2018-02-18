@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5C69899D2039518E0034BABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C69899C2039518E0034BABD /* AppDelegate.swift */; };
-		5C69899F2039518E0034BABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C69899E2039518E0034BABD /* ViewController.swift */; };
 		5C6989A22039518E0034BABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6989A02039518E0034BABD /* Main.storyboard */; };
 		5C6989A52039518E0034BABD /* MoodTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989A32039518E0034BABD /* MoodTracker.xcdatamodeld */; };
 		5C6989A72039518E0034BABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6989A62039518E0034BABD /* Assets.xcassets */; };
 		5C6989AA2039518E0034BABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6989A82039518E0034BABD /* LaunchScreen.storyboard */; };
+		5C6989B22039589E0034BABD /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B12039589E0034BABD /* MoodTableViewController.swift */; };
+		5C6989B4203958E90034BABD /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B3203958E90034BABD /* MoodTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C6989992039518E0034BABD /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C69899C2039518E0034BABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C69899E2039518E0034BABD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C6989A12039518E0034BABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C6989A42039518E0034BABD /* MoodTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodTracker.xcdatamodel; sourceTree = "<group>"; };
 		5C6989A62039518E0034BABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6989A92039518E0034BABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C6989AB2039518E0034BABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C6989B12039589E0034BABD /* MoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
+		5C6989B3203958E90034BABD /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				5C69899C2039518E0034BABD /* AppDelegate.swift */,
-				5C69899E2039518E0034BABD /* ViewController.swift */,
+				5C6989B12039589E0034BABD /* MoodTableViewController.swift */,
+				5C6989B3203958E90034BABD /* MoodTableViewCell.swift */,
 				5C6989A02039518E0034BABD /* Main.storyboard */,
 				5C6989A62039518E0034BABD /* Assets.xcassets */,
 				5C6989A82039518E0034BABD /* LaunchScreen.storyboard */,
@@ -139,9 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6989B4203958E90034BABD /* MoodTableViewCell.swift in Sources */,
 				5C6989A52039518E0034BABD /* MoodTracker.xcdatamodeld in Sources */,
-				5C69899F2039518E0034BABD /* ViewController.swift in Sources */,
 				5C69899D2039518E0034BABD /* AppDelegate.swift in Sources */,
+				5C6989B22039589E0034BABD /* MoodTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
