@@ -16,6 +16,7 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         entryTextView.inputAccessoryView = toolbar
         entryTextView.becomeFirstResponder()
+        loadDateAndTime()
         locationManager.delegate = self
     }
     
@@ -47,27 +48,34 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: CLLocation Manager Delegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locationManager.stopUpdatingLocation()
-        let geocoder = CLGeocoder()
         
+        let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(manager.location!) { (placemarks, error) in
-            if let placemarksData = placemarks {
-                let locationData = placemarksData[0]
-                // San Francisco, CA zip, United States
-                let city = locationData.locality!
-                let state = locationData.administrativeArea!
-                let zipCode = locationData.postalCode!
-                let country = locationData.country!
-                let location = "\(city), \(state) \(zipCode), \(country)"
-                
-                self.locationLabel.text = location
-                
-            } else {
-                print("Error: \(String(describing: error?.localizedDescription))")
-            }
-        }
+        if let placemarksData = placemarks {
+           let locationData = placemarksData[0]
+           // San Francisco, CA zip, United States
+           let city = locationData.locality!
+           let state = locationData.administrativeArea!
+           let zipCode = locationData.postalCode!
+           let country = locationData.country!
+           let location = "\(city), \(state) \(zipCode), \(country)"
+                    
+           self.locationLabel.text = location
+           } else {
+                    print("Error: \(String(describing: error?.localizedDescription))")
+           }
+       }
     }
     
-   
-
+    // MARK: - loading date and time
+    
+    let dateformatter = DateFormatter()
+    
+    func loadDateAndTime() {
+        dateformatter.dateStyle = .medium
+        dateformatter.timeStyle = .medium
+        dateTimeLabel.text = dateformatter.string(from: Date())
+    }
 }
+    
+
