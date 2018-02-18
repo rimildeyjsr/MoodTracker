@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +18,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="smiley face" translatesAutoresizingMaskIntoConstraints="NO" id="irm-a7-uIl">
+                                <rect key="frame" x="141" y="297.5" width="92" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="8Jb-vP-qXm"/>
+                                    <constraint firstAttribute="width" constant="92" id="GHc-WX-ofz"/>
+                                    <constraint firstAttribute="width" secondItem="irm-a7-uIl" secondAttribute="height" multiplier="1:1" id="Q8c-nK-7FA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAB-Hs-65G">
+                                <rect key="frame" x="82.5" y="180" width="210" height="37.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.080999999999999989" green="0.81000000000000005" blue="0.31185000000000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="irm-a7-uIl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NaO-J4-nhf"/>
+                            <constraint firstItem="irm-a7-uIl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="PfA-R6-cqz"/>
+                            <constraint firstItem="irm-a7-uIl" firstAttribute="top" secondItem="bAB-Hs-65G" secondAttribute="bottom" constant="80" id="aq3-au-LRa"/>
+                            <constraint firstItem="bAB-Hs-65G" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lNY-UW-cVB"/>
+                            <constraint firstItem="bAB-Hs-65G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="ptI-E2-dEl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +50,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smiley face" width="2600" height="2600"/>
+    </resources>
 </document>
