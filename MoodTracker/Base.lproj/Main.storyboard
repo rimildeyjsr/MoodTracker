@@ -72,6 +72,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="IAx-L2-GF1" secondAttribute="trailing" id="ydD-J4-7aY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="selectedDateLabel" destination="95r-BS-3T1" id="xWa-bt-hgC"/>
+                                    <outlet property="selectedEntryLabel" destination="qMM-Mj-rb0" id="7WP-7Q-KIl"/>
+                                    <outlet property="selectedImageView" destination="bss-Vx-kwG" id="Tgn-MS-squ"/>
+                                    <outlet property="selectedLocationLabel" destination="yc5-2l-qag" id="ldb-pJ-EIt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -80,6 +86,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mood Tracker" id="7Ui-bK-ynC">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="statistics" id="4Gw-Yd-kHC">
+                            <inset key="imageInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="add button" id="uKg-B0-L2S">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -266,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPs-hr-cxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="151.12443778110946"/>
+            <point key="canvasLocation" x="265" y="151"/>
         </scene>
     </scenes>
     <resources>
@@ -276,5 +285,6 @@
         <image name="happy face icon" width="35" height="35"/>
         <image name="location" width="19" height="19"/>
         <image name="smiley face icon" width="35" height="35"/>
+        <image name="statistics" width="50" height="50"/>
     </resources>
 </document>

@@ -10,15 +10,19 @@ import UIKit
 
 class MoodTableViewCell: UITableViewCell {
 
+    // MARK: - when cell loads
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectedImageView.layer.cornerRadius = selectedImageView.frame.width * 0.1
+        selectedImageView.layer.masksToBounds = true
+        self.layoutIfNeeded()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    // MARK: - outlets
+    
+    @IBOutlet weak var selectedImageView: UIImageView!
+    @IBOutlet weak var selectedDateLabel: UILabel!
+    @IBOutlet weak var selectedEntryLabel: UILabel!
+    @IBOutlet weak var selectedLocationLabel: UILabel!
+    
 }
