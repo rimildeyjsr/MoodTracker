@@ -15,8 +15,8 @@
 		5C6989B22039589E0034BABD /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B12039589E0034BABD /* MoodTableViewController.swift */; };
 		5C6989B4203958E90034BABD /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B3203958E90034BABD /* MoodTableViewCell.swift */; };
 		5C6989B62039A2CD0034BABD /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B52039A2CD0034BABD /* NewEntryViewController.swift */; };
-		5C6989B9203AEBE30034BABD /* Entries+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B7203AEBE30034BABD /* Entries+CoreDataClass.swift */; };
-		5C6989BA203AEBE30034BABD /* Entries+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B8203AEBE30034BABD /* Entries+CoreDataProperties.swift */; };
+		5C6989BE203C40FA0034BABD /* Timeline+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989BC203C40FA0034BABD /* Timeline+CoreDataClass.swift */; };
+		5C6989BF203C40FA0034BABD /* Timeline+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989BD203C40FA0034BABD /* Timeline+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		5C6989B12039589E0034BABD /* MoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
 		5C6989B3203958E90034BABD /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		5C6989B52039A2CD0034BABD /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
-		5C6989B7203AEBE30034BABD /* Entries+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entries+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5C6989B8203AEBE30034BABD /* Entries+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entries+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5C6989BC203C40FA0034BABD /* Timeline+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5C6989BD203C40FA0034BABD /* Timeline+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +48,8 @@
 		5C6989902039518E0034BABD = {
 			isa = PBXGroup;
 			children = (
+				5C6989BC203C40FA0034BABD /* Timeline+CoreDataClass.swift */,
+				5C6989BD203C40FA0034BABD /* Timeline+CoreDataProperties.swift */,
 				5C69899B2039518E0034BABD /* MoodTracker */,
 				5C69899A2039518E0034BABD /* Products */,
 			);
@@ -64,7 +66,7 @@
 		5C69899B2039518E0034BABD /* MoodTracker */ = {
 			isa = PBXGroup;
 			children = (
-				5C6989BB203AEC040034BABD /* Model */,
+				5C6989A32039518E0034BABD /* MoodTracker.xcdatamodeld */,
 				5C69899C2039518E0034BABD /* AppDelegate.swift */,
 				5C6989B12039589E0034BABD /* MoodTableViewController.swift */,
 				5C6989B3203958E90034BABD /* MoodTableViewCell.swift */,
@@ -75,16 +77,6 @@
 				5C6989AB2039518E0034BABD /* Info.plist */,
 			);
 			path = MoodTracker;
-			sourceTree = "<group>";
-		};
-		5C6989BB203AEC040034BABD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5C6989B7203AEBE30034BABD /* Entries+CoreDataClass.swift */,
-				5C6989B8203AEBE30034BABD /* Entries+CoreDataProperties.swift */,
-				5C6989A32039518E0034BABD /* MoodTracker.xcdatamodeld */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +153,10 @@
 			files = (
 				5C6989B62039A2CD0034BABD /* NewEntryViewController.swift in Sources */,
 				5C6989B4203958E90034BABD /* MoodTableViewCell.swift in Sources */,
-				5C6989BA203AEBE30034BABD /* Entries+CoreDataProperties.swift in Sources */,
+				5C6989BE203C40FA0034BABD /* Timeline+CoreDataClass.swift in Sources */,
+				5C6989BF203C40FA0034BABD /* Timeline+CoreDataProperties.swift in Sources */,
 				5C6989A52039518E0034BABD /* MoodTracker.xcdatamodeld in Sources */,
 				5C69899D2039518E0034BABD /* AppDelegate.swift in Sources */,
-				5C6989B9203AEBE30034BABD /* Entries+CoreDataClass.swift in Sources */,
 				5C6989B22039589E0034BABD /* MoodTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
