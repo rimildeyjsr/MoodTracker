@@ -19,7 +19,12 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
         entryTextView.becomeFirstResponder()
         loadDateAndTime()
         locationManager.delegate = self
+        
     }
+    
+    
+    // MARK: - Location
+    let locationManager = CLLocationManager()
     
     // MARK: - outlets
     
@@ -27,6 +32,11 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var toolbar: UIView!
     @IBOutlet weak var dateTimeLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var admireImage: UIImageView!
+    @IBOutlet weak var happyImage: UIImageView!
+    @IBOutlet weak var smileyImage: UIImageView!
+    @IBOutlet weak var frownImage: UIImageView!
+    
     
     // MARK: - Interactions
     
@@ -37,9 +47,23 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func locationButton(_ sender: UIButton) {
         getLocation()
     }
+   
+    @IBAction func tappedAdmireImage(_ sender: UITapGestureRecognizer) {
+        print("tapped 1")
+    }
     
-    // MARK: - Location
-    let locationManager = CLLocationManager()
+    @IBAction func tappedHappyImage(_ sender: UITapGestureRecognizer) {
+        print("tapped 2")
+    }
+    
+    @IBAction func tappedSmileyImage(_ sender: UITapGestureRecognizer) {
+        print("tapped 3")
+    }
+    
+    @IBAction func tappedFrownImage(_ sender: UITapGestureRecognizer) {
+        print("tapped 4")
+    }
+    
     
     // MARK: Location Functions
     func getLocation() {

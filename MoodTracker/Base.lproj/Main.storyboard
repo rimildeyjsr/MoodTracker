@@ -127,37 +127,53 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2PB-wv-tIG">
                                         <rect key="frame" x="19.5" y="119.5" width="336" height="72"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="admire face icon" translatesAutoresizingMaskIntoConstraints="NO" id="m5d-a4-ySv">
+                                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="admire face icon" translatesAutoresizingMaskIntoConstraints="NO" id="m5d-a4-ySv">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="NZH-4b-SVV"/>
                                                     <constraint firstAttribute="width" secondItem="m5d-a4-ySv" secondAttribute="height" multiplier="1:1" id="Pk4-UT-maw"/>
                                                     <constraint firstAttribute="width" constant="72" id="nrN-3k-sbA"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Azk-Mf-PBc" appends="YES" id="acQ-bZ-2DE"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy face icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-cJ-PhQ">
+                                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy face icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-cJ-PhQ">
                                                 <rect key="frame" x="88" y="0.0" width="72" height="72"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Eaf-cJ-PhQ" secondAttribute="height" multiplier="1:1" id="1eI-sa-ksc"/>
                                                     <constraint firstAttribute="height" constant="72" id="kV0-4G-AQC"/>
                                                     <constraint firstAttribute="width" constant="72" id="wop-Lo-0uo"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="GcY-ka-n7A" appends="YES" id="aBo-Oq-8Ip"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley face icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bkt-4V-8QT">
+                                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley face icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bkt-4V-8QT">
                                                 <rect key="frame" x="176" y="0.0" width="72" height="72"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="6I2-9W-vev"/>
                                                     <constraint firstAttribute="width" secondItem="Bkt-4V-8QT" secondAttribute="height" multiplier="1:1" id="p4j-lB-ooW"/>
                                                     <constraint firstAttribute="width" constant="72" id="yYi-in-Vdh"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="xbb-D5-luf" appends="YES" id="fPl-sG-DCi"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frown face icon" translatesAutoresizingMaskIntoConstraints="NO" id="aUG-hH-fFu">
+                                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frown face icon" translatesAutoresizingMaskIntoConstraints="NO" id="aUG-hH-fFu">
                                                 <rect key="frame" x="264" y="0.0" width="72" height="72"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="92E-cH-5L0"/>
                                                     <constraint firstAttribute="height" constant="72" id="ZKI-8w-nTM"/>
                                                     <constraint firstAttribute="width" secondItem="aUG-hH-fFu" secondAttribute="height" multiplier="1:1" id="efg-2w-Whr"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="mp2-jE-cZF" appends="YES" id="pMl-di-Scg"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -212,9 +228,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="admireImage" destination="m5d-a4-ySv" id="vF1-wn-iX7"/>
                         <outlet property="dateTimeLabel" destination="1ZB-ad-wKT" id="H8E-cv-H9U"/>
                         <outlet property="entryTextView" destination="IgU-1Y-goz" id="fcJ-YN-tzt"/>
+                        <outlet property="frownImage" destination="aUG-hH-fFu" id="wmd-8C-bF6"/>
+                        <outlet property="happyImage" destination="Eaf-cJ-PhQ" id="r59-PD-fO8"/>
                         <outlet property="locationLabel" destination="fnm-Yy-B4k" id="zSt-Ku-nAp"/>
+                        <outlet property="smileyImage" destination="Bkt-4V-8QT" id="3cG-Nx-Q42"/>
                         <outlet property="toolbar" destination="GXO-Kh-HVb" id="gTm-TQ-fly"/>
                     </connections>
                 </viewController>
@@ -251,6 +271,26 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="2Sv-Hz-qpB"/>
                 </view>
+                <tapGestureRecognizer id="Azk-Mf-PBc">
+                    <connections>
+                        <action selector="tappedAdmireImage:" destination="8OG-vU-EkX" id="zeS-jU-8Zl"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GcY-ka-n7A">
+                    <connections>
+                        <action selector="tappedHappyImage:" destination="8OG-vU-EkX" id="eod-TJ-FFL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xbb-D5-luf">
+                    <connections>
+                        <action selector="tappedSmileyImage:" destination="8OG-vU-EkX" id="gvd-3J-BTB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mp2-jE-cZF">
+                    <connections>
+                        <action selector="tappedFrownImage:" destination="8OG-vU-EkX" id="LeJ-yP-tji"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1973.5999999999999" y="150.67466266866569"/>
         </scene>
