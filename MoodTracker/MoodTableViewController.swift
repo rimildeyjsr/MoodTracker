@@ -7,31 +7,93 @@
 //
 
 import UIKit
+import CoreData
 
-class MoodTableViewController: UITableViewController {
+class MoodTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    // MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeFetchedResultsController()
     }
+    
+    // MARK: - core data
+    let context = (UIApplication.shared.delegate as!  AppDelegate).persistentContainer.viewContext
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    
+    func initializeFetchedResultsController() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Timeline")
+        let sortByDate = NSSortDescriptor(key: "date", ascending: false)
+        request.sortDescriptors = [sortByDate]
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("Failed to initialize FetchedResultsController: \(error)")
+        }
+    }
+    
+    var imageNameString: String?
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
+        let timeline = fetchedResultsController.object(at: indexPath) as! Timeline
+        let cell = cell as! MoodTableViewCell
+        let dateformmater = DateFormatter()
+        dateformmater.dateStyle = .long
+        
+        if let date = timeline.date {
+            cell.selectedDateLabel.text = dateformmater.string(from: date as Date)
+        }
+        
+        if let locationString = timeline.location {
+            cell.selectedLocationLabel.text = locationString
+        }
+        
+        cell.selectedEntryLabel.text = timeline.entry
+        
+        switch timeline.mood {
+        case "admire"?: imageNameString = "admire face icon"
+        case "happy"?: imageNameString = "happy face icon"
+        case "smiley"?: imageNameString = "smiley face icon"
+        case "frown"?: imageNameString = "frown face icon"
+        default: break
+        }
+        
+        cell.selectedImageView.image = UIImage(named: imageNameString!)
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "moodCell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "moodCell") as! MoodTableViewCell
+        configureCell(cell: cell, indexPath: indexPath)
+        
         return cell
     }
     
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections!.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sections = fetchedResultsController.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        let sectionInfo = sections[section]
+        return sectionInfo.numberOfObjects
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
