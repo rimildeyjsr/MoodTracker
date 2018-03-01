@@ -61,7 +61,7 @@ class MoodTableViewController: UITableViewController, NSFetchedResultsController
         case "happy"?: imageNameString = "happy face icon"
         case "smiley"?: imageNameString = "smiley face icon"
         case "frown"?: imageNameString = "frown face icon"
-        default: break
+        default: imageNameString = "question mark"
         }
         
         cell.selectedImageView.image = UIImage(named: imageNameString!)
