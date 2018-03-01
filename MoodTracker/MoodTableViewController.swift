@@ -122,6 +122,9 @@ class MoodTableViewController: UITableViewController, NSFetchedResultsController
         return sectionInfo.numberOfObjects
     }
     
+    
+    // MARK: - UItableview delegate
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
