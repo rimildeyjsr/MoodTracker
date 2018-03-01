@@ -37,11 +37,11 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var smileyImage: UIImageView!
     @IBOutlet weak var frownImage: UIImageView!
     
-    
+    var selectedMood: String?
     // MARK: - Interactions
     
     @IBAction func doneButton(_ sender: UIBarButtonItem) {
-        //saveEntry()
+        saveEntry()
     }
     
     @IBAction func locationButton(_ sender: UIButton) {
@@ -50,18 +50,22 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
    
     @IBAction func tappedAdmireImage(_ sender: UITapGestureRecognizer) {
         print("tapped 1")
+        selectedMood = "admire"
     }
     
     @IBAction func tappedHappyImage(_ sender: UITapGestureRecognizer) {
         print("tapped 2")
+        selectedMood = "happy"
     }
     
     @IBAction func tappedSmileyImage(_ sender: UITapGestureRecognizer) {
         print("tapped 3")
+        selectedMood = "smiley"
     }
     
     @IBAction func tappedFrownImage(_ sender: UITapGestureRecognizer) {
         print("tapped 4")
+        selectedMood = "frown"
     }
     
     
@@ -106,7 +110,7 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     // MARK: - core data
-    /*func saveEntry() {
+    func saveEntry() {
         
         if entryTextView.text.count > 0 {
             
@@ -118,6 +122,7 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
             //pass values to core data
             timeline.entry = entryTextView.text
             timeline.date = currentDate as NSDate?
+            timeline.mood = selectedMood
             
             if let locationText = locationLabel.text {
                 timeline.location = locationText
@@ -126,9 +131,16 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
             //save to core data
             appDelegate.saveContext()
             
-        }
+     }
+     
+     // Core Data Path
+     let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+     print("Core Data Path:\n \(path)")
+     
+     let _ = navigationController?.popToRootViewController(animated: true)
+     
        
-    }*/
+    }
 }
     
 

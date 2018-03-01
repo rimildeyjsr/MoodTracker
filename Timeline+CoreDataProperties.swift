@@ -20,6 +20,6 @@ extension Timeline {
     @NSManaged public var entry: String?
     @NSManaged public var date: NSDate?
     @NSManaged public var location: String?
-    @NSManaged public var mood: NSData?
+    @NSManaged public var mood: String?
 
 }
