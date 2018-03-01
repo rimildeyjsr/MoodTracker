@@ -49,23 +49,19 @@ class NewEntryViewController: UIViewController, CLLocationManagerDelegate {
     }
    
     @IBAction func tappedAdmireImage(_ sender: UITapGestureRecognizer) {
-        print("tapped 1")
-        selectedMood = "admire"
+        selectedMood = "admire face icon"
     }
     
     @IBAction func tappedHappyImage(_ sender: UITapGestureRecognizer) {
-        print("tapped 2")
-        selectedMood = "happy"
+        selectedMood = "happy face icon"
     }
     
     @IBAction func tappedSmileyImage(_ sender: UITapGestureRecognizer) {
-        print("tapped 3")
-        selectedMood = "smiley"
+        selectedMood = "smiley face icon"
     }
     
     @IBAction func tappedFrownImage(_ sender: UITapGestureRecognizer) {
-        print("tapped 4")
-        selectedMood = "frown"
+        selectedMood = "frown face icon"
     }
     
     

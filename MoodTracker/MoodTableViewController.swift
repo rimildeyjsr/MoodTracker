@@ -92,15 +92,12 @@ class MoodTableViewController: UITableViewController, NSFetchedResultsController
         
         cell.selectedEntryLabel.text = timeline.entry
         
-        switch timeline.mood {
-        case "admire"?: imageNameString = "admire face icon"
-        case "happy"?: imageNameString = "happy face icon"
-        case "smiley"?: imageNameString = "smiley face icon"
-        case "frown"?: imageNameString = "frown face icon"
-        default: imageNameString = "question mark"
+        if let imageNameString = timeline.mood {
+            cell.selectedImageView.image = UIImage(named: imageNameString)
+        } else {
+            cell.selectedImageView.image = UIImage(named: "question mark")
         }
         
-        cell.selectedImageView.image = UIImage(named: imageNameString!)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
