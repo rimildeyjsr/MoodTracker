@@ -17,6 +17,8 @@
 		5C6989B62039A2CD0034BABD /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989B52039A2CD0034BABD /* NewEntryViewController.swift */; };
 		5C6989BE203C40FA0034BABD /* Timeline+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989BC203C40FA0034BABD /* Timeline+CoreDataClass.swift */; };
 		5C6989BF203C40FA0034BABD /* Timeline+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6989BD203C40FA0034BABD /* Timeline+CoreDataProperties.swift */; };
+		5CF889352049D35F00EA6F54 /* YourEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF889342049D35F00EA6F54 /* YourEntryTableViewController.swift */; };
+		5CF889372049D38100EA6F54 /* YourEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF889362049D38100EA6F54 /* YourEntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5C6989B52039A2CD0034BABD /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		5C6989BC203C40FA0034BABD /* Timeline+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5C6989BD203C40FA0034BABD /* Timeline+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5CF889342049D35F00EA6F54 /* YourEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourEntryTableViewController.swift; sourceTree = "<group>"; };
+		5CF889362049D38100EA6F54 /* YourEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourEntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				5C6989B12039589E0034BABD /* MoodTableViewController.swift */,
 				5C6989B3203958E90034BABD /* MoodTableViewCell.swift */,
 				5C6989B52039A2CD0034BABD /* NewEntryViewController.swift */,
+				5CF889342049D35F00EA6F54 /* YourEntryTableViewController.swift */,
+				5CF889362049D38100EA6F54 /* YourEntryTableViewCell.swift */,
 				5C6989A02039518E0034BABD /* Main.storyboard */,
 				5C6989A62039518E0034BABD /* Assets.xcassets */,
 				5C6989A82039518E0034BABD /* LaunchScreen.storyboard */,
@@ -152,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6989B62039A2CD0034BABD /* NewEntryViewController.swift in Sources */,
+				5CF889352049D35F00EA6F54 /* YourEntryTableViewController.swift in Sources */,
 				5C6989B4203958E90034BABD /* MoodTableViewCell.swift in Sources */,
+				5CF889372049D38100EA6F54 /* YourEntryTableViewCell.swift in Sources */,
 				5C6989BE203C40FA0034BABD /* Timeline+CoreDataClass.swift in Sources */,
 				5C6989BF203C40FA0034BABD /* Timeline+CoreDataProperties.swift in Sources */,
 				5C6989A52039518E0034BABD /* MoodTracker.xcdatamodeld in Sources */,
