@@ -72,11 +72,11 @@
 			children = (
 				5C6989A32039518E0034BABD /* MoodTracker.xcdatamodeld */,
 				5C69899C2039518E0034BABD /* AppDelegate.swift */,
+				5CF889362049D38100EA6F54 /* YourEntryTableViewCell.swift */,
+				5CF889342049D35F00EA6F54 /* YourEntryTableViewController.swift */,
 				5C6989B12039589E0034BABD /* MoodTableViewController.swift */,
 				5C6989B3203958E90034BABD /* MoodTableViewCell.swift */,
 				5C6989B52039A2CD0034BABD /* NewEntryViewController.swift */,
-				5CF889342049D35F00EA6F54 /* YourEntryTableViewController.swift */,
-				5CF889362049D38100EA6F54 /* YourEntryTableViewCell.swift */,
 				5C6989A02039518E0034BABD /* Main.storyboard */,
 				5C6989A62039518E0034BABD /* Assets.xcassets */,
 				5C6989A82039518E0034BABD /* LaunchScreen.storyboard */,

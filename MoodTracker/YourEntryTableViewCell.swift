@@ -12,13 +12,12 @@ class YourEntryTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: - outlets
+    @IBOutlet weak var dateLocationLabel: UILabel!
+    @IBOutlet weak var moodImage: UIImageView!
+    @IBOutlet weak var YourEntryLabel: UILabel!
+    
 
 }
